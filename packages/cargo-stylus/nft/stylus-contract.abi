@@ -57,7 +57,7 @@ interface IStylusNFT is IErc721 {
 
     function initialize(address art_contract_address) external;
 
-    function getArtContractAddress() external returns (address);
+    function getArtContractAddressSepoliaArb() external returns (address);
 
     error AlreadyInitialized();
 

@@ -83,7 +83,7 @@ impl StylusNFT {
 
     /// Mints an NFT and calls onErc712Received with the specified data
     #[selector(name = "safeMint")]
-    pub fn safe_mint_with_data(&mut self, data: Bytes) -> Result<(), Vec<u8>> {
+    pub fn safe_mint_with_data_sepolia_arb(&mut self, data: Bytes) -> Result<(), Vec<u8>> {
         let minter = msg::sender();
         Erc721::safe_mint(self, minter, data.0)?;
         Ok(())
@@ -129,7 +129,7 @@ impl StylusNFT {
     }
 
     /// Getter for the art contract address
-    pub fn get_art_contract_address(&mut self) -> Result<Address, StylusNFTError> {
+    pub fn get_art_contract_address_sepolia_arb(&mut self) -> Result<Address, StylusNFTError> {
         Ok(self.art_contract_address.get())
     }
 }
